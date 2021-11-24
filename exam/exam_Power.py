@@ -18,3 +18,4 @@ n, k, pk = MyPower.Compute(mode = 'DM')
 if MyPower.rank == 0:
     plt.loglog(k, pk)
     plt.savefig('./exam_Power.png')
+    print('exam_CrossCor complete!')

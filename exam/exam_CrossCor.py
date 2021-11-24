@@ -19,3 +19,4 @@ n, k, rk = MyCor.Compute()
 if MyCor.rank == 0:
     plt.semilogx(k, rk)
     plt.savefig('./exam_CrossCor.png')
+    print('exam_CrossCor complete!')
