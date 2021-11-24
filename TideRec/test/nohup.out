@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "test.py", line 5, in <module>
+    data = np.arange(768**3).reshape([768, 768, 768])
+KeyboardInterrupt
