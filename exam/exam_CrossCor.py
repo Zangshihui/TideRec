@@ -1,7 +1,6 @@
 import numpy as np
 from TideRec import Rec
 from TideRec import CrossCor
-from scipy.fft import fftn, ifftn
 import matplotlib.pyplot as plt
 
 BoxSize = 250.0

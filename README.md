@@ -8,6 +8,39 @@ __Note that some functions are still under development.__ If you find any bug or
     cd TideRec
     pip install -e .
 
+## Quick Start
+### Initial the Rec class
+Frist you should import the related class Rec into the program
+
+    import numpy as np
+    from TideRec import Rec
+
+Then initial this class using two parameters NMesh and BoxSize.
+
+    NMesh = 256
+    BoxSize = 250.0
+    MyRec = Rec(BoxSize = BoxSize, NMesh = NMesh)
+
+We need to provide the inital density field before reconstruction by a binary file. (More reading procedures are under development.)
+
+    MyRec.Read(mode = 'binary', path = './exam_data/Ng256_Density.bin')
+
+### Perform tidal reconstruction
+Reconstruction method is required. 5-shear-term tidal reconstruction '5term' and 2-shear term tidal reconstruction '2-term' are available. 'sigma' is the filter size before reconstruction, you can set is to the grid size approximately.
+
+    MyRec.AutoRec(mode ='5term', sigma = 1)
+
+### Save the reconstructed field
+If mpi4py is not used in the program, you can just Get the density field and save it.
+
+    data = Density.Get('density')
+
+However, if mpiexec is used to run the program, we provide a function to save the data, otherwise only part of the data would be saved.
+
+    MyRec.Save(data = MyRec.Get('density'), path = './data.bin')
+
+__See the example file to see more functions of this package.__
+
 ## Links
 
 * Source code: [https://github.com/Zangshihui/TideRec](https://github.com/Zangshihui/TideRec)
