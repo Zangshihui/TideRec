@@ -8,12 +8,9 @@ __Note that some functions are still under development.__ If you find any bug or
     cd TideRec
     pip install -e .
 
-## License
-TideRec is distributed under the Apache License, Version 2.0.
-
 ## Links
-* Documentation:
-* Source code:
+
+* Source code: [https://github.com/Zangshihui/TideRec](https://github.com/Zangshihui/TideRec)
 
 ## mpi available
 This package is compatible with mpi4py. You may run the program like
@@ -21,3 +18,6 @@ This package is compatible with mpi4py. You may run the program like
     mpiexec -n 8 python XXX.py
 
 __Note that the number of processes must be the divisor of NMesh.__ We recommend you to choose NMesh as power of 2 and number of process as 2,4,8 or 16.
+
+## License
+TideRec is distributed under the Apache License, Version 2.0.

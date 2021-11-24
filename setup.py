@@ -12,5 +12,6 @@ setup(
     install_requires=[
     #'python>=3.6.0',
     #'pandas>=0.10.0'
+    'mpi4py>=3.1.2'
     ]
 )
