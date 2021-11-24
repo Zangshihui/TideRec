@@ -115,7 +115,6 @@ class Bin(RS):
         MPI_k = self.comm.reduce(k_bin, root = 0)
         
         if self.rank == 0 :
-            print(MPI_n)
             return MPI_n, MPI_k/MPI_n*self.Kf, MPI_Ak/MPI_n
         else:
             return None, None, None
