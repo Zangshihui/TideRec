@@ -44,6 +44,7 @@ __See the example file to see more functions of this package.__
 ## Links
 
 * Source code: [https://github.com/Zangshihui/TideRec](https://github.com/Zangshihui/TideRec)
+* MPI_IO code is credit to [https://github.com/POFK/CosmAna](https://github.com/POFK/CosmAna)
 
 ## mpi available
 This package is compatible with mpi4py. You may run the program like
